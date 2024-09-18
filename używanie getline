@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    string napis;
+    cout<<"Podaj jakis tekst: ";
+    //cin>>napis;
+    getline(cin,napis, '.');
+
+    cout<<"\nWpisałeś: "<<napis<<endl;
+    return 0;
+}
