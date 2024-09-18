@@ -1,0 +1,59 @@
+#include <iostream>
+using namespace std;
+//deklaracje funkcji:
+float oblicz_BMI(float, float);
+//funkcja float oblicza BMI
+void interpretuj_BMI(float);
+//funkcja void oddaje BMI (czy jestes otyły) nie zwraca nic
+string interpretuj_BMI_s(float);
+
+int main(){
+    string dwaga, dwzrost;
+    float waga=0, wzrost=0, bmi=0;
+    string komunikat;
+    cout<<"Wpisz swoją wagę w kg: "<<endl;
+    //cin>>waga;
+    getline(cin,dwaga);
+    cout<<"Wpisz swój wzrost w m. Wpisz ją w dwóch cyfrach po kropce np 1.78: "<<endl;
+    //cin>>wzrost;
+    getline(cin,dwzrost);
+    cout<<"Podałeś: "<<stof(dwaga)<<" "<<stof(dwzrost)<<endl;
+
+    if (waga>0 && wzrost>0){
+    bmi=oblicz_BMI(waga, wzrost);
+    //wywołujemy funkcję
+    cout<<"Twoje BMI wynosi "<<bmi;
+    komunikat=interpretuj_BMI_s(oblicz_BMI(waga, wzrost));
+    cout<<komunikat;
+    }else{
+        cout<<"Podałeś nieprwidłowe wartości wagi i wzrostu";
+    }
+
+    
+
+    return 0;
+}
+//Definicja funkcji
+float oblicz_BMI (float waga, float wzrost){
+    //ciało funkcji w nawiasie klamrowym
+    float bmi=waga/(wzrost*wzrost);
+    return bmi;
+}
+void interpretuj_BMI (float bmi){
+    if (bmi<18){
+        cout<<"\nMasz niedowagę";
+    }else if(bmi>25){
+        cout<<"\nMasz nadwagę";
+    }else{
+        cout<<"\nTwoja waga jest prawidłowa";
+    }
+}
+string interpretuj_BMI_s(float bmi){
+        if (bmi<18){
+        return "\nMasz niedowagę";
+    }else if(bmi>25){
+        return "\nMasz nadwagę";
+    }else{
+        return "\nTwoja waga jest prawidłowa";
+    }
+}
