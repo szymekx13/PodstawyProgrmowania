@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+float przelicz(float);
+int main(){
+    float predkosc, predkoscdwa;
+    cout<<"WPisz prędkość w metrach na sekundę: "<<endl;
+    cin>>predkosc;
+    cout<<"Prędkość w kilometrach na godzinę "<<przelicz(predkosc)<<endl;
+    return 0;
+}
+float przelicz(float predkosc){
+float kilometry;
+kilometry=predkosc*3,6;
+cout<<"wynosi: "<<kilometry;
+}
