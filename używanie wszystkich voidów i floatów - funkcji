@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+float przelicz(float);
+void km_na_vms(float);
+void vms_na_vkmh(float, float)
+
+{}int main(){
+    float predkosc, wynik_w_m_na_s, vkmh;
+    cout<<"WPisz prędkość w metrach na sekundę: "<<endl;
+    cin>>predkosc;
+    //cout<<"Prędkość w kilometrach na godzinę "<<przelicz(predkosc)<<endl;
+    //cout<<predkosc<<" w metrach na sekundę wynosi "<<przelicz(predkosc)<<endl;
+    //wynik_w_m_na_s=przelicz(predkosc);
+    //km_na_vms(predkosc);
+    vms_na_vkmh(predkosc, vkmh);
+    cout<<predkosc<<" w m/s to "<<vkmh;
+    
+    return ;
+}
+
+float przelicz(float predkosc){
+float kilometry;
+kilometry=predkosc*3,6;
+cout<<"wynosi: "<<kilometry;
+
+}
+void km_na_vms(float predkosc){
+cout<<predkosc<<" w m na sek wnosi "<<predkosc*3.6;
+}
+void vms_na_vkmh(float predkosc, float vkmh){
+    vkmh=predkosc*3.6;
+}
