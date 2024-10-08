@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    float a=0, b=0, c=0;
+    //wprowadzenie danych
+    cout<<"Witaj oto sprawdzacz trójkąta. Podaj 3 boki trójkąta"<<endl;
+    
+    cout<<"Wpisz trzy liczby odzielone enterem"<<endl;
+    cin>>a>>b>>c;
+    
+    
+    // Sprawdzanie czy boki są dodatnie
+    if (a <= 0 || b <= 0 || c <= 0) {
+        cout << "Wpisałeś niepoprawne liczby. Wszystkie boki muszą być większe od zera." << endl;
+    } else {
+        // Sprawdzanie warunku trójkąta
+        if (a + b > c && b + c > a && c + a > b) {
+            cout << "Z tych boków da się zbudować trójkąt." << endl;
+        } else {
+            cout << "Z tych boków nie da się zbudować trójkąta." << endl;
+        }
+    }
+
+    return 0;
+}
