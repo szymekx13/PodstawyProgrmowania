@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+void zamiana_zmiennych(float &a, float &b);
+
+int main() {
+    float a = 0, b = 0;
+    cout << "Witaj w zamianie zmiennych, wpisz 2 zmienne: " << endl;
+    cin >> a >> b;
+    
+    // Wywołanie funkcji zamiany zmiennych
+    zamiana_zmiennych(a, b);
+
+    // Wypisanie nowych wartości
+    cout << "Po zamianie twoje liczby wyglądają następująco: a = " << a << ", b = " << b << endl;
+
+    return 0;
+}
+
+void zamiana_zmiennych(float &a, float &b) {
+    // Zamiana zmiennych
+    float temp = a;
+    a = b;
+    b = temp;
+}
