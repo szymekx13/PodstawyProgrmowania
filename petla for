@@ -3,7 +3,18 @@ using namespace std;
 
 int main(){
     //słowa kluczowe: for, while, do while,
-    for(int i=0;i<10;i=i+1)// i++ to to samo co i+=1 oraz i=1+1;
+    for(int i=0;i<10;i=i+1)// i++ to to samo co i=+1 oraz i=1+1;
+    cout<<"licnik i wynosi: "<<i<<endl;
+    return 0;
+}
+
+//pętla idzie wdół
+//#include <iostream>
+using namespace std;
+
+int main(){
+    //słowa kluczowe: for, while, do while,
+    for(int i=20;i>0;i=i-1)// i-- to to samo co i=-1 oraz i=i-1;
     cout<<"licnik i wynosi: "<<i<<endl;
     return 0;
 }
