@@ -1,0 +1,38 @@
+//c++ ezzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+#include <iostream>
+#include <cmath>
+using namespace std;
+float obliczanie_obwodu(float, float, float);
+float obliczanie_pola_bez_wysokosci(float, float, float);
+
+int main(){
+    float a, b, c;
+    cout<<"Podaj boki trójkąta"<<endl;
+    cin>>a>>b>>c;
+    if (a>0 && b> 0 && c>0){
+        if (a+b>c && b+c>a && a+c>b){
+            cout<<"Obwód trójkąta wynosi "<<obliczanie_obwodu(a, b, c)<<endl;
+            cout<<"Pole trójkąta wynosi "<<obliczanie_pola_bez_wysokosci(a, b, c)<<endl;
+            cout<<"Dziękujemy za skorzytstanie z programu";
+    }   else{
+        cout<<"Ten trójkąt nie istnieje. Podaj wartości ponownie";
+    }
+    }else{
+        cout<<"Trójkąt nie może zawierać wartości ujemnych"<<endl;
+    }
+
+    return 0;
+    
+
+}
+float obliczanie_obwodu(float a, float b, float c){
+    float obwod;
+    obwod = a+b+c;
+    return obwod;
+}
+float obliczanie_pola_bez_wysokosci(float a, float b, float c){
+    float pole, obwod2;
+    obwod2 = (a+b+c)/2;
+    pole= sqrt(obwod2*(obwod2-a)*(obwod2-b)*(obwod2-c));
+    return pole;
+}
