@@ -1,0 +1,16 @@
+/cpp
+#include <iostream>
+using namespace std;
+
+int main(){
+    for (int liczba = 2000; liczba <= 2030; ++liczba) {
+        if (liczba == 2001 || liczba == 2003 || liczba == 2008) {
+            continue;
+        }
+        if (liczba == 2024) {
+            break;
+        }
+        cout << liczba << endl;
+    }
+return 0;
+}
