@@ -1,0 +1,34 @@
+//cpp
+#include <iostream>
+using namespace std;
+
+int NWD (int a, int b);
+int NajwiekszyWW (int a, int b, int nwd);
+
+int main(){
+    int a=0, b=0, NWW=0;
+    cout<<"Oto obliczanie NWD z dwóch liczb"<<endl;
+    cout<<"Wpisz liczbę a"<<endl;
+    cin>>a;
+    cout<<endl;
+    cout<<"Wpisz liczbę b"<<endl;
+    cin>>b;
+    cout<<endl;
+    int nwd = NWD(a, b);
+    cout<<"NWD tych liczb to "<<NWD(a, b)<<endl;
+    cout<<"A NWW tych liczb wynosi "<<NajwiekszyWW(a, b, nwd);
+    return 0;
+}
+int NWD (int a, int b){
+    while (a!=b){
+        if (a>b){
+            a = a-b;
+        }else{
+            b = b-a;
+        }
+    }
+    return a;
+}
+int NajwiekszyWW (int a, int b, int nwd){
+    return (a*b)/nwd;
+}
