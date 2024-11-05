@@ -1,0 +1,45 @@
+//cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b, x, y, z;
+    char choice;
+
+    do {
+        cout << "Podaj początek przedziału (a): ";
+        cin >> a;
+        cout << "Podaj koniec przedziału (b): ";
+        cin >> b;
+        cout << "Podaj liczbę x: ";
+        cin >> x;
+        cout << "Podaj liczbę y: ";
+        cin >> y;
+        cout << "Podaj liczbę z: ";
+        cin >> z;
+        if (a<b){
+            int c = b;
+            b=a;
+            a=c;
+            cout<<"Liczby a i b zostały zamienione"<<endl;
+        }else{
+            cout<<endl;
+        }
+
+        cout << "Liczby podzielne przez " << x << ", " << y << " lub " << z << " w przedziale [" << a << ", " << b << "]:" << endl;
+
+        for (int i = a; i <= b; i++) {
+            if (i % x == 0 || i % y == 0 || i % z == 0) {
+                cout << i << " ";
+            }
+        }
+        cout << endl;
+
+        cout << "Czy chcesz kontynuować? (t/n): ";
+        cin >> choice;
+
+    } while (choice == 't' || choice == 'T' || choice == 'Tak' || choice == 'TAK');
+
+    cout << "Koniec programu." << endl;
+    return 0;
+}
