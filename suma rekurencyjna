@@ -1,0 +1,27 @@
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+using namespace std;
+
+int suma_rekurencyjna(int arr[], int n) {
+    if (n <= 0)
+        return 0;
+    else
+        return arr[n - 1] + suma_rekurencyjna(arr, n - 1);
+}
+
+int main(){
+    srand(time(NULL));
+    int tab[10];
+    for(int i=1; i<=10; i++){
+        tab[i]=rand()%100;
+    }
+    cout<<"\nLiczby w tablicy: ";
+    for(int i=1; i<=10; i++){
+        cout<<tab[i]<<", ";
+    }
+    cout<<endl;
+    int suma=suma_rekurencyjna(tab, 10);
+    cout<<"Suma liczb w tablicy: "<<suma;
+}
